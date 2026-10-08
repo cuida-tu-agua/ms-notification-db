@@ -1,0 +1,18 @@
+databaseChangeLog:
+# Release v1.2 — notification_preferences (HU-034).
+# Runs AFTER the v1.1 tag. Order: tables → FK → tag.
+
+  - includeAll:
+      path: 01-ddl/03-tables/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 01-ddl/04-alter/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 04-tcl/02-release-tags/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
