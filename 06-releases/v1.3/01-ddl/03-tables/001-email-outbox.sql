@@ -17,6 +17,6 @@ CREATE TABLE notification.email_outbox (
     sent_at         DATETIME2        NULL,
     CONSTRAINT PK_email_outbox PRIMARY KEY (id),
     CONSTRAINT CK_eout_status  CHECK (status IN (N'PENDING', N'SENT', N'FAILED')),
-    CONSTRAINT CK_eout_sent    CHECK ((status = N'SENT') = (sent_at IS NOT NULL))
+    CONSTRAINT CK_eout_sent    CHECK ((status = N'SENT' AND sent_at IS NOT NULL) OR (status <> N'SENT' AND sent_at IS NULL))
 );
 --rollback DROP TABLE notification.email_outbox;
