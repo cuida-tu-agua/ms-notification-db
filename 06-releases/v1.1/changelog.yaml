@@ -1,0 +1,18 @@
+databaseChangeLog:
+# Release v1.1 — place_devices, the local projection the RabbitMQ consumer needs (HU-033).
+# Runs AFTER the v1.0-baseline tag. Order: tables → FK → tag.
+
+  - includeAll:
+      path: 01-ddl/03-tables/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 01-ddl/04-alter/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 04-tcl/02-release-tags/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
