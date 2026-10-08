@@ -22,6 +22,7 @@ docker compose up                  # sqlserver-init + liquibase update
 | `v1.1-place-devices` | `notification.place_devices`: dueño del dispositivo de cada lugar (de `device.linked`) y último estado de la válvula, para notificar solo los cambios (HU-033) |
 | `v1.2-preferences` | `notification.notification_preferences`: canales que el usuario quiere por nivel de urgencia (HU-034); las críticas siempre conservan la app |
 | `v1.3-email-outbox` | `notification.email_outbox`: correos pendientes de enviar (HU-027) con reintentos; no guarda la dirección, se pide a ms-iam al enviar |
+| `v1.4-device-liveness` | `place_devices.last_reading_at` y `offline_alerted_at`: cuándo reportó por última vez el dispositivo y si ya se avisó que se silenció (HU-032) |
 
 ## Reglas
 

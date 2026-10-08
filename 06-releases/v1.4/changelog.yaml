@@ -1,0 +1,18 @@
+databaseChangeLog:
+# Release v1.4 — device liveness (HU-032).
+# Runs AFTER the v1.3 tag. Order: alter → indexes → tag.
+
+  - includeAll:
+      path: 01-ddl/04-alter/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 01-ddl/09-indexes/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
+
+  - includeAll:
+      path: 04-tcl/02-release-tags/
+      relativeToChangelogFile: true
+      errorIfMissingOrEmpty: false
