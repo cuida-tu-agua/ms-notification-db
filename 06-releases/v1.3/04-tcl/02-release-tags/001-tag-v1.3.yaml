@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: v1.3-tcl-tag-001
-      author: esteban
+      author: diego
       comment: email_outbox (HU-027 e-mail channel with retries)
       changes:
         - tagDatabase:

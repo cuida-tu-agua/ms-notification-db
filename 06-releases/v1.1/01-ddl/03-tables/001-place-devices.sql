@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:v1.1-ddl-table-001-place-devices
+--changeset diego:v1.1-ddl-table-001-place-devices
 --comment: Local copy of "who owns the device of each place" (from device.linked / device.unlinked) so that a device event with no user id (device.valve.reported) can be turned into a notification for the right person. Also remembers the last valve state to notify only CHANGES
 CREATE TABLE notification.place_devices (
     place_id           UNIQUEIDENTIFIER NOT NULL,

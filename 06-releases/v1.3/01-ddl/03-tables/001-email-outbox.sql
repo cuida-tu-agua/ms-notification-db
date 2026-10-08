@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:v1.3-ddl-table-001-email-outbox
+--changeset diego:v1.3-ddl-table-001-email-outbox
 --comment: HU-027 e-mails waiting to leave (outbox). The address is NOT stored: it is asked to ms-iam when the mail is sent. One row per (source event, user) so a redelivered event never sends two mails. Failed sends are retried with a growing delay
 CREATE TABLE notification.email_outbox (
     id              UNIQUEIDENTIFIER NOT NULL,

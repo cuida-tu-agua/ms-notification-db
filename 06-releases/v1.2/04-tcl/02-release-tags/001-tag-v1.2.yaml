@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: v1.2-tcl-tag-001
-      author: esteban
+      author: diego
       comment: notification_preferences (HU-034 channels per urgency level)
       changes:
         - tagDatabase:

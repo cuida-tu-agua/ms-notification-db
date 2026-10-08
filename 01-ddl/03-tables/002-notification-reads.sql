@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:ddl-table-002-notification-reads
+--changeset diego:ddl-table-002-notification-reads
 --comment: Who already read which notification. One row per (notification, user): a role notification is read by each person separately
 CREATE TABLE notification.notification_reads (
     notification_id UNIQUEIDENTIFIER NOT NULL,

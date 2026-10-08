@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:v1.2-ddl-table-001-notification-preferences
+--changeset diego:v1.2-ddl-table-001-notification-preferences
 --comment: HU-034 channels the user wants for each urgency level. A missing row = the default of the channel matrix. A CRITICAL level always keeps the in-app channel (CK_nprefs_critical_in_app)
 CREATE TABLE notification.notification_preferences (
     user_id    UNIQUEIDENTIFIER NOT NULL,

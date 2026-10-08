@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:dcl-grant-001-notification-rw runInTransaction:false
+--changeset diego:dcl-grant-001-notification-rw runInTransaction:false
 --comment: Notifications and reads are history (no UPDATE/DELETE of notifications, no DELETE of reads); Liquibase tables are read only
 GRANT SELECT, INSERT, UPDATE, DELETE ON SCHEMA::notification TO notification_rw;
 DENY  UPDATE, DELETE ON OBJECT::notification.notifications            TO notification_rw;

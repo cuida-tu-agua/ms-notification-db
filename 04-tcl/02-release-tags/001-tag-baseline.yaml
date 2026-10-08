@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: tcl-tag-001-baseline
-      author: esteban
+      author: diego
       comment: Baseline tag of the notification domain (notifications + reads + FKs + indexes + grants)
       changes:
         - tagDatabase:

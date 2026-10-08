@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:ddl-fk-003-fk-nread-notification
+--changeset diego:ddl-fk-003-fk-nread-notification
 --comment: notification_reads.notification_id -> notifications (same schema)
 ALTER TABLE notification.notification_reads
     ADD CONSTRAINT FK_nread_notification

@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:ddl-fk-002-fk-notif-place
+--changeset diego:ddl-fk-002-fk-notif-place
 --comment: notifications.place_id -> places.places (cross-schema, ADR-002)
 ALTER TABLE notification.notifications
     ADD CONSTRAINT FK_notif_place

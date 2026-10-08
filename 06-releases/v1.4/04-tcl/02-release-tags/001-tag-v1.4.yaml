@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: v1.4-tcl-tag-001
-      author: esteban
+      author: diego
       comment: place_devices liveness columns (HU-032 sensor disconnected)
       changes:
         - tagDatabase:

@@ -1,6 +1,6 @@
 --liquibase formatted sql
 
---changeset esteban:ddl-table-001-notifications
+--changeset diego:ddl-table-001-notifications
 --comment: One message for ONE user (user_id) or for EVERY user with a role (role). Never both, never none. Immutable: reading is stored in notification_reads
 CREATE TABLE notification.notifications (
     id              UNIQUEIDENTIFIER NOT NULL,

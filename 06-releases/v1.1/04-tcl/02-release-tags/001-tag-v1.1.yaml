@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: v1.1-tcl-tag-001
-      author: esteban
+      author: diego
       comment: place_devices (owner of each place device + last valve state) for the event consumer
       changes:
         - tagDatabase:
