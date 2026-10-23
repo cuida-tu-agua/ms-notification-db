@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1.6-tcl-tag-001
+      author: diego
+      comment: sms_outbox for critical alerts by SMS or WhatsApp (HU-028)
+      changes:
+        - tagDatabase:
+            tag: v1.6-sms-outbox
