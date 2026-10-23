@@ -23,6 +23,7 @@ docker compose up                  # sqlserver-init + liquibase update
 | `v1.2-preferences` | `notification.notification_preferences`: canales que el usuario quiere por nivel de urgencia (HU-034); las críticas siempre conservan la app |
 | `v1.3-email-outbox` | `notification.email_outbox`: correos pendientes de enviar (HU-027) con reintentos; no guarda la dirección, se pide a ms-iam al enviar |
 | `v1.4-device-liveness` | `place_devices.last_reading_at` y `offline_alerted_at`: cuándo reportó por última vez el dispositivo y si ya se avisó que se silenció (HU-032) |
+| `v1.6-sms-outbox` | `notification.sms_outbox`: alertas críticas pendientes de enviar por SMS o WhatsApp (HU-028) con reintentos; no guarda el teléfono (se pide a ms-iam al enviar, con el modo verificado); `SKIPPED` si el usuario ya no tiene teléfono verificado; guarda el modo y el ID de Twilio con que salió. Los códigos de verificación no pasan por esta tabla |
 
 ## Reglas
 
