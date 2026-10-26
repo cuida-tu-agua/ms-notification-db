@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: v1.7-tcl-tag-001
+      author: diego
+      comment: message_templates editable by the admin and invitation notification types (HU-028, HU-042, HU-043)
+      changes:
+        - tagDatabase:
+            tag: v1.7-message-templates

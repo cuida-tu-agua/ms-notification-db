@@ -24,6 +24,7 @@ docker compose up                  # sqlserver-init + liquibase update
 | `v1.3-email-outbox` | `notification.email_outbox`: correos pendientes de enviar (HU-027) con reintentos; no guarda la dirección, se pide a ms-iam al enviar |
 | `v1.4-device-liveness` | `place_devices.last_reading_at` y `offline_alerted_at`: cuándo reportó por última vez el dispositivo y si ya se avisó que se silenció (HU-032) |
 | `v1.6-sms-outbox` | `notification.sms_outbox`: alertas críticas pendientes de enviar por SMS o WhatsApp (HU-028) con reintentos; no guarda el teléfono (se pide a ms-iam al enviar, con el modo verificado); `SKIPPED` si el usuario ya no tiene teléfono verificado; guarda el modo y el ID de Twilio con que salió. Los códigos de verificación no pasan por esta tabla |
+| `v1.7-message-templates` | `notification.message_templates`: textos de WhatsApp / SMS que el admin personalizó (alerta crítica, código del teléfono, invitación a colaborar, enlace de invitado compartido por WhatsApp); solo se guardan los personalizados (sin fila = texto por defecto de ms-notification; "restaurar" borra la fila). Tipos de notificación nuevos `COLLABORATOR_INVITATION` e `INVITATION_ANSWERED` (HU-042, HU-043) |
 
 ## Reglas
 
